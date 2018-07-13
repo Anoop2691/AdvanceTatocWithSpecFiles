@@ -7,8 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class TestingFileHandlePage {
+public class TestingFileHandlePage extends RetrieveLocators{
+	
 
+	public TestingFileHandlePage() {
+		super("FileHandling");
+	}
 	public void downloadFileAndReadSignature() throws InterruptedException {
 		element("downloadFile").click();
 		Thread.sleep(5000);		
@@ -28,5 +32,8 @@ public class TestingFileHandlePage {
 		element("signature").sendKeys(prop.getProperty("Signature"));
 		element("submit").click();
 		file.delete();
+	}
+	public String returnPageHeadingText() {
+		return element("getPageHeadingText").getText();
 	}
 }

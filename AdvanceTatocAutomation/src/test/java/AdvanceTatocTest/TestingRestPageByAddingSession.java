@@ -1,14 +1,18 @@
 package AdvanceTatocTest;
 
 import java.io.BufferedReader;
-import static AdvanceTatocTest.RetrieveLocators.element;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class TestingRestPageByAddingSession extends ReturnPageHeading{
+public class TestingRestPageByAddingSession extends RetrieveLocators{
+
+	public TestingRestPageByAddingSession() {
+		super("RestSession");
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getSessionId() {
 		return element("findSessionId").getText();
@@ -57,5 +61,8 @@ public class TestingRestPageByAddingSession extends ReturnPageHeading{
 		catch(Exception e) {
 			System.out.println("exception: "+ e);
 		}
+	}
+	public String returnPageHeadingText() {
+		return element("getPageHeadingText").getText();
 	}
 }

@@ -1,9 +1,13 @@
 package AdvanceTatocTest;
 
-import static AdvanceTatocTest.RetrieveLocators.element;
-
-public class AdvanceCourseFirstPage extends ReturnPageHeading {
+public class AdvanceCourseFirstPage extends RetrieveLocators {
+	public  AdvanceCourseFirstPage() {
+		super("BasicCourse");
+	}
 	public void clickOnWebElement()  {
-		element("findElementAdvanceCourseLink").click();
+		element("finElementAdvanceCourseLink").click();
+	}
+	public String returnPageHeadingText() {
+		return element("getPageHeadingText").getText();
 	}
 }

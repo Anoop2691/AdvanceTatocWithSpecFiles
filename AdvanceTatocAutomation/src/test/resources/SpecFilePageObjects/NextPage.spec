@@ -1,0 +1,1 @@
+getPageHeadingText					className		page

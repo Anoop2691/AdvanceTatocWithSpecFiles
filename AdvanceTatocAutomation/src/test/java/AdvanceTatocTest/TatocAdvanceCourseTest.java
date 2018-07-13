@@ -21,6 +21,7 @@ public class TatocAdvanceCourseTest {
 		 driver.get("http://10.0.1.86/tatoc");
 		 Reporter.log("Launch application ", true);
 		 objectForAccessingFunctions =new FunctionsForTatocAdvanceCourse(driver);
+		 RetrieveLocators rl=new RetrieveLocators(driver);
 	 }
 	  
  @Test

@@ -2,13 +2,16 @@ package AdvanceTatocTest;
 
 
 import java.sql.Connection;
-import static AdvanceTatocTest.RetrieveLocators.element;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 
-public class TestingQueryGateThirdPage extends ReturnPageHeading{
+public class TestingQueryGateThirdPage extends RetrieveLocators{
+	public TestingQueryGateThirdPage() {
+		super("QueryGate");
+	}
+
 	Connection connectingToDatabase;
 	
 	public void databaseConnection() {
@@ -51,5 +54,8 @@ public class TestingQueryGateThirdPage extends ReturnPageHeading{
 		}catch(Exception e) {
 			System.out.println("Exception : "+e);
 		}
+	}
+	public String returnPageHeadingText() {
+		return element("getPageHeadingText").getText();
 	}
 }
